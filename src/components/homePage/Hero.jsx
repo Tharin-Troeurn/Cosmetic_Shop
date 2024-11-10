@@ -19,7 +19,7 @@ const Hero = () => {
   };
 
   return (
-    <div className='container-fluid relative h-[500px]'>
+    <div className='container-fluid relative h-[500px] lg:mt-[105px] md:mt-[105px] sm:mt-[62px] mt-[64px]'>
       {/* hero background */}
       <div className='w-full  bg-orange-100 h-full absolute'></div>
       {/* hero section */}

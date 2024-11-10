@@ -2,6 +2,7 @@ import React from 'react'
 import { products } from '../../data/data'
 import { FaStar } from "react-icons/fa6";
 import { FaRegStarHalfStroke } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 const TrendingProducts = () => {
   return (
@@ -19,13 +20,14 @@ const TrendingProducts = () => {
 
               <div key={data.id} className=' relative' data-aos="fade-up"
                 data-aos-delay={data.aosDelay}>
-                <a href="#">
+                <Link to={'/product-detail'}>
                   {/* image section */}
-                  <div className='hover:scale-105 duration-100 border border-gray-500'>
+                  <div className=' border border-gray-500 overflow-hidden
+                    xl:h-[250px] lg:h-[200px] md:h-[200px] sm:h-[220px] h-[200px]'>
                     <img
                       src={data.image}
                       alt=""
-                      className='w-full xl:h-[250px] lg:h-[200px] md:h-[200px] sm:h-[220px] h-[200px] object-cover'
+                      className='w-full h-full hover:scale-105 duration-100 object-cover '
                     />
                   </div>
                   {/* detail section */}
@@ -55,7 +57,7 @@ const TrendingProducts = () => {
                       </div>
                     ) : null
                   }
-                </a>
+                </Link>
 
               </div>
             ))
@@ -63,10 +65,12 @@ const TrendingProducts = () => {
         </div>
 
         <div className='mt-6 flex justify-center' data-aos="fade-up">
-          <button className='bg-gradient-to-r from-red-600 to-rose-900 rounded-full 
-                          px-4 py-1 text-white hover:scale-105'>
-            View all Product
-          </button>
+          <Link to={'/shop'}>
+            <button className='bg-gradient-to-r from-red-600 to-rose-900 rounded-full 
+                            px-4 py-1 text-white hover:scale-105'>
+              View all Product
+            </button>
+          </Link>
         </div>
       </div>
 

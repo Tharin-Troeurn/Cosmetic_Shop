@@ -54,7 +54,6 @@ const CategoryShop = () => {
           <Slider {...settings}>
             {
               categoryList.map((data) => (
-
                 <div key={data.id}>
                   <a href="#" className="no-outline">
                     <img

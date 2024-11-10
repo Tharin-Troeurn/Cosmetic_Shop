@@ -14,10 +14,10 @@ const Header = () => {
   return (
     <>
       {/* top navbar */}
-      <div className='container-fluid bg-rose-900'>
-        <div className='container py-4 '>
+      <div className='container-fluid bg-rose-900 fixed top-0 left-0 z-50 w-full '>
+        <div className='container'>
           
-          <div className='flex justify-between items-center'>
+          <div className='h-[60px] flex justify-between items-center'>
             <div>
               <Link to='/'>
                 <h1 className='text-2xl text-white font-bold'>Cosmetics Shop</h1>
@@ -37,8 +37,16 @@ const Header = () => {
 
               </div>
               
-              <FaRegUser className='text-xl cursor-pointer text-white'/>
-              <FaShoppingCart className='text-xl cursor-pointer text-white'/>
+              <FaRegUser className='text-2xl cursor-pointer text-white'/>
+              <div className='relative'>
+                <FaShoppingCart className='text-2xl cursor-pointer text-white'/>
+                <div className='bg-white text-rose-900 rounded-full w-5 h-5 flex 
+                  justify-center items-center absolute -top-3 -right-3'>
+                  <span >0</span>
+                </div>
+                
+              </div>
+              
               <div className='cursor-pointer text-white lg:hidden md:hidden sm:flex flex'>
                 <FaBars className='text-xl' onClick={toggleNavbar}/>
               </div>
@@ -50,7 +58,7 @@ const Header = () => {
       {/* lower navbar */}
       <div 
         className={`container-fluid bg-white shadow-md py-3 lg:block md:block 
-        ${isNavbarOpen ? "block" : "hidden"}`}
+        ${isNavbarOpen ? "block" : "hidden"} fixed top-[60px] z-40 w-full`}
       >
         <div className='container '>
           <ul className='lg:flex md:flex sm:block  justify-center gap-8 sm:text-center text-center'>

@@ -25,13 +25,13 @@ import productImg5 from '../assets/productsImg/product-5.jpg'
 const menus = [
   {
     id: 1,
-    name: "Hair Cream",
-    link: "/hair-cream"
+    name: "Home",
+    link: "/"
   },
   {
     id: 2,
-    name: "Face Product",
-    link: "/face-product"
+    name: "Shop",
+    link: "/shop"
   },
   {
     id: 3,
@@ -50,7 +50,7 @@ const menus = [
   },
   {
     id: 6,
-    name: "Face Cream",
+    name: "Feedback",
     link: "/#"
   },
 ];

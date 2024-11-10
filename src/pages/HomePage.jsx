@@ -7,10 +7,10 @@ import { Banner } from '../components/homePage/Banner'
 const HomePage = () => {
   return (
     <>
-        <Hero/>
-        <CategoryShop/>
-        <Banner/>
-        <TrendingProducts/>
+      <Hero/>
+      <CategoryShop/>
+      <Banner/>
+      <TrendingProducts/>
         
     </>
   )

@@ -2,13 +2,15 @@ import React from 'react'
 import { bannerList } from '../../data/data'
 
 export const Banner = () => {
+    
+
     return (
         <div className='container mt-20'>
             <div className='grid lg:grid-cols-2 md:grid-cols-2  gap-10'>
                 {
                     bannerList.map((data) => (
                         <div className='bg-orange-100 rounded-sm p-5 flex justify-between
-                            items-center'>
+                            items-center' key={data.id}>
                             {/* text section */}
                             <div>
                                 <p className='text-[18px] text-gray-600' data-aos="zoom-in">{data.title_discount}</p>
